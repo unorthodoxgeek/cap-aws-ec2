@@ -39,7 +39,7 @@ class CapAwsEc2
               Aws.config = { access_key_id: @key,
                              secret_access_key: @secret,
                              region: @region }
-              Aws::EC2.new
+              Aws::EC2::Client.new
              end
   end
 
