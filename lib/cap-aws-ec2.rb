@@ -60,7 +60,7 @@ class CapAwsEc2
     ip = instance.public_ip_address
     roles_tag = instance.tags.find {|t| t.key == "Roles"}.value
     roles = roles_tag.split(/,|;/)
-    [ip, roles].flatten
+    [ip, roles: roles].flatten
   end
 
 end
